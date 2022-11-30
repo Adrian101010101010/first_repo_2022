@@ -1,0 +1,168 @@
+
+#include <iostream>
+#include <vector>
+
+using namespace std;
+
+double random(double min, double max)
+{
+    return (double)(rand())/RAND_MAX*(max - min) + min;
+}
+
+class Guest{
+     public:
+     
+          std::string name;
+          std::string citi;
+          int age;
+         std::string phone_number;
+             
+  Guest(int id,std::string name,std::string citi,int age,std::string phone_number){
+         std::string phon_number;
+         cout<<random(100000, 999999)<<" "<< name<<" "<<citi<<" "<<age<<" "<<" "<<phon_number<<" "<<endl;
+      }
+};
+
+enum Gender{FEMALE, MALE, NON_BINARY};
+Gender guests=MALE;
+
+class Party{
+  friend Guest;
+  
+     private:
+      
+     public:
+         int day;
+         std::string reason;
+         int a;
+         Guest guests();
+         vector<Guest>guestss;
+         string name;
+         Party(string name): name(name) {}
+         void AddGuest(Guest & a){
+             Guest push_back(a);
+        }
+     
+};
+void swap(int *xp, int *yp) 
+{ 
+    int temp = *xp; 
+    *xp = *yp; 
+    *yp = temp; 
+} 
+ 
+void bubblesort(int arr[], int n) 
+{ 
+   int x, y; 
+   for (x=0; x<n-1; x++)        
+       for (y=0; y<n-x-1; y++)  
+             if (arr[y]>arr[y+1]) 
+                 swap(&arr[y], &arr[y+1]); 
+} 
+
+
+void printarray(int arr[], int size) 
+{ 
+    int i; 
+    for (i=0; i<size; i++) 
+        printf("%d ", arr[i]); 
+    printf("\n"); 
+} 
+  
+int main( ) {
+       cout<<"laboratory work 5"<<endl;
+    cout<<"executed NAKONECHNYY ADRIAN"<<endl;
+   
+int arr[] = {156489,987465,684569,487945}; 
+    int n = sizeof(arr)/sizeof(arr[0]); 
+    bubblesort(arr, n); 
+    printf("sorting guest on id: \n"); 
+    printarray(arr, n);
+ 
+  Guest Ustun(random(100000, 999999),"Ustun","Lviv",18,"+380-62-745-76-56");
+  Guest Denus(random(100000, 999999),"Denus","Lviv",17,"+380-35-943-72-61");
+  Guest Andriy(random(100000, 999999),"Denus","Ctruy",17,"+380-55-715-55-51");
+  Guest Adrian(random(100000, 999999),"Adrian","Lviv",17,"+380-96-940-52-00");
+  
+   
+  Party firstGuest("Ustun");
+        firstGuest.AddGuest(Ustun);
+  
+  Party secondGuest("Denus");
+        secondGuest.AddGuest(Denus);
+  
+  Party thirdGuest(" Andriy");
+         thirdGuest.AddGuest(Andriy);
+        
+  Party fourthGuest("Adrian");
+        fourthGuest.AddGuest(Adrian);
+        
+        cout<<guests<<endl;
+  
+  std::string U = "+380-62-745-76-57"; 
+char c = '7';
+bool b=0;
+for (int i = 0; i < U.length(); i++) {
+if (c == U[i])  
+{ b=3;
+    break;
+    }
+}
+if(b==1){
+   std::cout << "the phone number is lucky" << std::endl; 
+}
+else{
+    std::cout << "the phone number is not lucky" << std::endl;
+} 
+
+  
+  std::string D = "+380-35-943-62-61"; 
+char ch = '7';
+bool bo=0;
+for (int i = 0; i < D.length(); i++) {
+if (ch == D[i])  
+{ bo=3;
+    break;
+    }
+}
+if(bo==1){
+   cout <<"the phone number is lucky"<< endl; 
+}
+else{
+    std::cout << "the phone number is not lucky" << std::endl;
+} 
+ 
+ std::string AN = "+380-55-515-55-51"; 
+char cha = '7';
+bool boo=0;
+for (int i = 0; i < AN.length(); i++) {
+if (cha == AN[i])  
+{ boo=3;
+    break;   
+}
+}
+if(boo==1){
+   std::cout << "the phone number is lucky" << std::endl; 
+}
+else{
+    std::cout << "the phone number is not lucky" << std::endl;
+} 
+
+std::string AD = "+380-96-940-52-00"; 
+char chat = '7';
+bool booy=0;
+for (int i = 0; i < AD.length(); i++) {
+if (chat == AD[i])  
+{ booy=3;
+    break;
+    }
+}
+if(booy==1){
+   std::cout << "the phone number is lucky" << std::endl; 
+}
+else{
+    std::cout << "the phone number is not lucky" << std::endl;
+} 
+
+ 
+  return 0; }
